@@ -140,7 +140,7 @@ async def python_command(event):
 	await event.reply('✅')
 
 @register_event(events.NewMessage(pattern=r'(?a)^/scores(?:@\w+)?(?:\s+(\d+))?'))
-@privileged_chat_required
+#@privileged_chat_required
 @command_required
 async def scores_command(event):
 	try:
