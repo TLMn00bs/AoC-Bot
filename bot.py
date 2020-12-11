@@ -53,8 +53,8 @@ async def notify_loop(client):
 		if next_puzzle is None:
 			return
 		await asyncio.sleep((next_puzzle - dt.datetime.utcnow()).total_seconds())
-		link = f'https://adventofcode.com/{next_puzzle.year}/day/{next_puzzle.day-1}'
-		await client.send_message(chat_id, f"Oh shirt, [a new puzzle]({link})! Let's get this gingerbread!")
+		link = f'https://adventofcode.com/{next_puzzle.year}/day/{next_puzzle.day}'
+		await client.send_message(chat_id, f"Bueeeenos días! Traigo [el reto de hoy día {next_puzzle.day}]({link}). Al lío!")
 
 def check(predicate):
 	predicate = utils.ensure_corofunc(predicate)
